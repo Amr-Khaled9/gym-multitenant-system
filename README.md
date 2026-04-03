@@ -84,20 +84,6 @@ VALUES (3, 'tenant3.com', 'tenant3_db');
 * Laravel
 * Spatie Multitenancy
 * MySQL
-* Apache (XAMPP)
 
 ---
 
-## 💡 Notes
-
-* The `tenant` database connection is dynamically updated at runtime
-* No hardcoded database names are used
-* Switching is handled automatically via Spatie tasks
-
----
-
-## 📌 Conclusion
-
-This project demonstrates a solid foundation for building **SaaS applications** with tenant isolation, scalability, and clean architecture.
-
----
