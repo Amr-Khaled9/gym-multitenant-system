@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
-
+protected $connection = 'tenant';
     /**
      * The attributes that are mass assignable.
      *

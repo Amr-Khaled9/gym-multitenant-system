@@ -149,7 +149,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')).'-database-'),
+            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '-database-'),
             'persistent' => env('REDIS_PERSISTENT', false),
         ],
 
@@ -179,6 +179,25 @@ return [
             'backoff_cap' => env('REDIS_BACKOFF_CAP', 1000),
         ],
 
+    ],
+    'connections' => [
+        'tenant' => [
+            'driver' => 'mysql',
+            'database' => null,
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '',
+            // And other options if needed ...
+        ],
+
+        'landlord' => [
+            'driver' => 'mysql',
+            'database' => 'landlord_db',
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '',
+            // And other options if needed ...
+        ],
     ],
 
 ];
