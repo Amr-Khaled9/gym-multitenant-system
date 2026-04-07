@@ -16,10 +16,15 @@ class Subscription extends Model
         'start_date',
         'end_date',
         'status',
+        'gym_id'
     ];
 
     public function member()
     {
         return $this->belongsTo(Member::class);
+    }
+    public function gym()
+    {
+        return $this->belongsTo(Gym::class);
     }
 }

@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gym extends Model
 {
-    //
+    protected $fillable = ['name', 'owner_name', 'email'];
+
+    
 }
