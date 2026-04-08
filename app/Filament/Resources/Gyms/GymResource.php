@@ -18,7 +18,7 @@ class GymResource extends Resource
 {
     protected static ?string $model = Gym::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-building-office';
 
     protected static ?string $recordTitleAttribute = 'Gym';
 
