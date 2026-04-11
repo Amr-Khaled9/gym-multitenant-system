@@ -47,4 +47,9 @@ class GymResource extends Resource
             'edit' => EditGym::route('/{record}/edit'),
         ];
     }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return auth()->check() && auth()->user()->email === 'admin@gmail.com';
+    }
 }
