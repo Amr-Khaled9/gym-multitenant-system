@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use App\Traits\BelongsToGym;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Trainer extends Model
 {
-    use BelongsToGym;
+    use BelongsToGym , HasFactory;
 
     protected $fillable = [
         'name',

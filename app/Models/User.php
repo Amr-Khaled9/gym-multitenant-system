@@ -46,4 +46,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function gym(){
+        return $this->belongsTo(Gym::class ,'gym_id');
+        
+    }
 }

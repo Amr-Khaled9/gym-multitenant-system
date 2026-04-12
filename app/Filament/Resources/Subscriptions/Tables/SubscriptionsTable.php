@@ -30,7 +30,12 @@ class SubscriptionsTable
                     ->date()
                     ->sortable(),
                 TextColumn::make('status')
-                    ->badge(),
+                    ->badge()
+                    ->colors([
+                        'success' => 'active',
+                        'danger' => 'cancelled',
+                        'warning' => 'expired',
+                    ]),
                 TextColumn::make('gym.name')
                     ->label('Gym')
                     ->searchable()

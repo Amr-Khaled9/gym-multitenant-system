@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Filament\Facades\Filament;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -38,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
-                \App\Filament\Widgets\StatsOverview::class, // 👈 فوق
+                \App\Filament\Widgets\StatsOverview::class,
 
                 \App\Filament\Widgets\RevenueChart::class,
                 \App\Filament\Widgets\MembersChart::class,
@@ -57,8 +58,12 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
-            
-    }
+            ])->brandName(function () {
+                $user = Filament::auth()->user();
 
+                return $user?->gym?->name
+                    ? $user->gym->name . ' 💪'
+                    : 'Gym-MultiTenancy 💪';
+            });
+    }
 }
