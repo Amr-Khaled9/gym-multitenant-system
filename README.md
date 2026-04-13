@@ -75,6 +75,7 @@ Secure multi-tenant architecture
 ## 📸 Screenshots
 
 ### 📊 Dashboard
-![Dashboard1](dashboard1.png)
 
-![Dashboard2](members2.png)
+![Dashboard1](Dashboard1.png)
+
+![Dashboard2](Dashboard2.png)
