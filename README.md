@@ -78,4 +78,4 @@ Secure multi-tenant architecture
 
 ![Dashboard1](public/Dashboard1.png)
 
-![Dashboard2](Dashboard2.png)
+![Dashboard2](public/Dashboard2.png)
