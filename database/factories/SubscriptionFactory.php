@@ -19,7 +19,7 @@ class SubscriptionFactory extends Factory
     public function definition(): array
     {
         return [
-            'member_id' => Member::inRandomOrder()->first()->id,
+            'member_id' => Member::factory(),
 
             'plan' => fake()->randomElement(['monthly', 'yearly']),
             'price' => fake()->numberBetween(200, 1000),
@@ -29,7 +29,7 @@ class SubscriptionFactory extends Factory
 
             'status' => fake()->randomElement(['active', 'expired']),
 
-            'gym_id' => 1,
+            'gym_id' => \App\Models\Gym::factory(),
         ];
     }
 }

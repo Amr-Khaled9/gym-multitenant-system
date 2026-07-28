@@ -24,7 +24,7 @@ class TrainerFactory extends Factory
             'specialization' => fake()->randomElement(['Bodybuilding', 'Cardio']),
             'salary' => fake()->numberBetween(2000, 8000),
 
-            'gym_id' => 1, // 🔥 مهم
+            'gym_id' => \App\Models\Gym::factory(),
 
         ];
     }

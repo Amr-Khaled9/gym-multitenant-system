@@ -23,9 +23,8 @@ class MemberFactory extends Factory
             'email' => fake()->safeEmail(),
             'phone' => fake()->phoneNumber(),
 
-            'gym_id' => 1,
-
-            'trainer_id' => Trainer::inRandomOrder()->first()?->id,
+            'gym_id' => \App\Models\Gym::factory(),
+            'trainer_id' => null,
         ];
     }
 }
